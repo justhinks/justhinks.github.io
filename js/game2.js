@@ -3,8 +3,8 @@ var wheel = document.getElementById('wheel'); // 转盘
     var luckDrawCountDom = document.querySelector('.luckDrawCount span'); // 抽奖次数dom
     // 转盘游戏属性
     var gameState = false;          //  游戏状态
-    var luckDrawCount = 10;         //  抽奖次数
-    var rotateZPositionCount = 0;   //  当前转盘的rotateZ 值
+    var luckDrawCount = 3;         //  抽奖次数
+    var rotateZPositionCount = 0;   //  当前转盘的rotateZ值
     var preUseRotateZ = 0;          //  上一次已抽奖中奖奖品的RotateZ
     var rotateZ = 360;              //  一圈360deg
     var rotateZCount = 10;          //  旋转圈数的倍数
@@ -22,23 +22,23 @@ var wheel = document.getElementById('wheel'); // 转盘
 
     const prize = [                 //  奖品设置 传入一个奖项，0，1，2，3，4， 分别是12345等奖
       {
-        title: '手气不错哟～恭喜获得',
+        title: '手气不错哟～恭喜获得：',
         prize: '100元红包', 
       },
       {
-        title: '手气不错哟～恭喜获得',
+        title: '手气不错哟～恭喜获得：',
         prize: '优惠券礼包',
       },
       {
-        title: '手气不错哟～恭喜获得',
+        title: '手气不错哟～恭喜获得：',
         prize: '优惠券礼包',
       },
       {
-        title: '手气不错哟～恭喜获得',
+        title: '手气不错哟～恭喜获得：',
         prize: '5元代金券',
       },
       {
-        title: '手气不错哟～恭喜获得',
+        title: '手气不错哟～恭喜获得：',
         prize: '1元红包',
       },
     ];
@@ -73,7 +73,7 @@ var wheel = document.getElementById('wheel'); // 转盘
         if(gameState) return;
         // 判断是否还有抽奖资格
         if(luckDrawCount <= 0){
-            alert('Sorry 您没有抽奖机会了');
+            alert('Sorry 你没有抽奖机会了');
             return;
         }
         gameState = true; // 设置游戏当前状态

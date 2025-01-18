@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> <!-- 确保响应式设计 -->
-    <title>抽奖</title>
+    <title>超级大抽奖</title>
     <style>
         * {
             margin: 0;
@@ -73,8 +73,8 @@
 
 <body>
     <div class="container">
-        <h2>开始抽奖了</h2>
-        <span id="list">马上开奖</span>
+        <h2>超级大抽奖</h2>
+        <span id="list">点击开始，随时喊停，即刻开奖！</span>
         <div>
             <span id="start" class="button">开始</span>
             <span id="stop" class="button">停止</span>
@@ -82,14 +82,14 @@
         </div>
     </div>
     <div class="description">
-        <p>说明：鼠标或者键盘回车键控制抽奖或者结束</p>
+        <p>这里可以加上你想要的说明XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
     </div>
 
     <script type="text/javascript">
         var list = document.getElementById('list'),
             start = document.getElementById('start'),
             stop = document.getElementById('stop'),
-            back = document.getElementById('back'); // 获取返回按钮
+            back = document.getElementById('back');
         var arr = ["苹果笔记本", "小米6", "nubia Z17", "ipod", "ipad mini2", "iPhone 8", "谢谢惠顾", "50元代金券", "1000元代金券", "iPhone X"];
         var timer = null;
         var flag = 0;

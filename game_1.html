@@ -46,7 +46,6 @@
 
         .button {
             display: inline-block; /* 使按钮为块级元素 */
-            margin-top: 30px;
             margin: 10px; /* 增加按钮间距 */
             text-align: center;
             width: 80px; /* 按钮宽度 */
@@ -79,6 +78,7 @@
         <div>
             <span id="start" class="button">开始</span>
             <span id="stop" class="button">停止</span>
+            <span id="back" class="button">GoBack</span>
         </div>
     </div>
     <div class="description">
@@ -88,7 +88,8 @@
     <script type="text/javascript">
         var list = document.getElementById('list'),
             start = document.getElementById('start'),
-            stop = document.getElementById('stop');
+            stop = document.getElementById('stop'),
+            back = document.getElementById('back'); // 获取返回按钮
         var arr = ["苹果笔记本", "小米6", "nubia Z17", "ipod", "ipad mini2", "iPhone 8", "谢谢惠顾", "50元代金券", "1000元代金券", "iPhone X"];
         var timer = null;
         var flag = 0;
@@ -96,11 +97,12 @@
         window.onload = function () {
             start.onclick = playFun;
             stop.onclick = stopFun;
+            back.onclick = goBack; // 设置返回按钮的点击事件
 
             document.onkeyup = keyupEvent;
         }
 
-        //键盘事件
+        // 键盘事件
         function keyupEvent(e) {
             e = e || window.event;
             if (flag == 0) {
@@ -114,7 +116,7 @@
             }
         }
 
-        //鼠标点击事件
+        // 鼠标点击事件
         function playFun() {
             clearInterval(timer);
             timer = setInterval(function () {
@@ -127,6 +129,12 @@
         function stopFun() {
             clearInterval(timer);
             start.style.background = 'rgb(0, 51, 102)';
+        }
+
+        // 返回首页的函数
+        function goBack() {
+            window.history.back(); // 返回上一页
+            // 或者使用 window.location.href = 'index.html'; // 跳转到指定的首页
         }
     </script>
 </body>

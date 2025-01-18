@@ -1,2 +1,2 @@
 # justhinks.github.io
-Github静态页面官网
+随便写的html小游戏网站
